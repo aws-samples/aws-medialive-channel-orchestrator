@@ -154,8 +154,8 @@ Resources:
       AdminCreateUserConfig:
         AllowAdminCreateUserOnly: true
         InviteMessageTemplate:
-          EmailMessage: "Your Serverless Media Controller username is {username} and the temporary password is {####}"
-          EmailSubject: "Your temporary password for Serverless Media Controller"
+          EmailMessage: "Your AWS MediaLive Channel Orchestrator username is {username} and the temporary password is {####}"
+          EmailSubject: "Your temporary password for AWS MediaLive Channel Orchestrator"
       AutoVerifiedAttributes:
         - email
       UserPoolAddOns:
