@@ -1,0 +1,41 @@
+---
+
+name: Backend tests
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+jobs:
+  test:
+    name: Run backend tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      # Setup Python
+      - name: Set up Python
+        id: setup-python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install pipenv
+        run: |
+          python -m pip install --upgrade pipenv
+      # Pipenv cache
+      - uses: actions/cache@v3
+        with:
+          path: ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-python-${{ steps.setup-python.outputs.python-version }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
+      # Install backend dependencies
+      - name: Install python dependencies
+        run: PIPENV_PIPFILE="$(pwd)/infrastructure/lambda/Pipfile" pipenv install --dev
+      # Run tests
+      - name: Run backend tests
+        run: PIPENV_PIPFILE="$(pwd)/infrastructure/lambda/Pipfile" pipenv run pytest infrastructure/lambda
+
