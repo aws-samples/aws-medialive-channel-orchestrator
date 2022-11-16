@@ -38,5 +38,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build app
-        run: npm build
+        run: npm run-script build
 
