@@ -1,0 +1,39 @@
+---
+
+name: CFN Tests
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+jobs:
+  test:
+    name: CFN static analysis tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      # Setup Python
+      - name: Set up Python
+        id: setup-python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install cfn-lint
+        run: pip install cfn-lint
+      # Setup Ruby
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+      - name: Install cfn-nag
+        run: gem install cfn-nag
+      # Run Tests
+      - name: Run cfn-nag
+        run: cfn_nag_scan --input-path template.yaml
+      - name: Run cfn-lint
+        run: cfn-lint template.yaml
