@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+boto3 = "*"
+aws-lambda-powertools = "*"
+aws-xray-sdk = "*"
+pytest = "*"
+fastjsonschema = "*"
+
+[requires]
+python_version = "3.9"

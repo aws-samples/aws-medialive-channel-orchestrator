@@ -1,0 +1,8 @@
+{
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "name": "AWS MediaLive Channel Orchestrator",
+  "short_name": "AWS MediaLive Channel Orchestrator",
+  "start_url": ".",
+  "theme_color": "#000000"
+}

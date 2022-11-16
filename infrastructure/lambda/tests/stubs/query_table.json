@@ -1,0 +1,27 @@
+{
+  "Items": [
+    {
+      "ChannelId": "abcdef01234567890",
+      "Id": "001",
+      "Name": "Example",
+      "SK": "OUTPUT#001",
+      "Url": "https://www.example.com/embed/12345678"
+    },
+    {
+      "ChannelId": "abcdef01234567890",
+      "Id": "101",
+      "Name": "Overlay 1",
+      "SK": "GRAPHIC#101",
+      "Url": "https://example.com/output/12345678?aspect=16x9"
+    },
+    {
+      "AlertedAt": 0.0,
+      "ChannelId": "abcdef01234567890",
+      "ExpiresAt": 3600.0,
+      "Id": "100",
+      "Message": "foobar",
+      "SK": "ALERT#100",
+      "State": "CLEARED"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "Channels": [
+    {
+      "Arn": "arn:aws:medialive:eu-west-1:111122223333:channel:abcdef01234567890",
+      "ChannelClass": "SINGLE_PIPELINE",
+      "Destinations": [
+        {
+          "Id": "mediapackage-destination",
+          "MediaPackageSettings": [
+            {
+              "ChannelId": "abcdef01234567890"
+            }
+          ],
+          "Settings": []
+        }
+      ],
+      "Id": "abcdef01234567890",
+      "InputAttachments": [
+        {
+          "InputAttachmentName": "Input 1",
+          "InputId": "021345abcdef6789"
+        },
+        {
+          "InputAttachmentName": "Input 2",
+          "InputId": "021345abcdef6789"
+        }
+      ],
+      "Name": "Channel 1",
+      "RoleArn": "arn:aws:iam::111122223333:role/role",
+      "State": "IDLE",
+      "Tags": {}
+    }
+  ]
+}

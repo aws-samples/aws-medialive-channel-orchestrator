@@ -1,0 +1,34 @@
+{
+  "Arn": "arn:aws:medialive:eu-west-1:111122223333:channel:abcdef01234567890",
+  "ChannelClass": "SINGLE_PIPELINE",
+  "Destinations": [
+    {
+      "Id": "mediapackage-destination",
+      "MediaPackageSettings": [
+        {
+          "ChannelId": "test"
+        }
+      ],
+      "Settings": []
+    }
+  ],
+  "EncoderSettings": {
+    "MotionGraphicsConfiguration": {
+      "MotionGraphicsInsertion": "ENABLED",
+      "MotionGraphicsSettings": {
+        "HtmlMotionGraphicsSettings": {}
+      }
+    }
+  },
+  "Id": "abcdef01234567890",
+  "PipelineDetails": [
+    {
+      "ActiveInputAttachmentName": "Input 1",
+      "ActiveInputSwitchActionName": "a1b2c3d4-5678-90ab-cdef-EXAMPLE11111",
+      "PipelineId": "0"
+    }
+  ],
+  "Tags": {
+    "GenericStream": "https://example.com/c, https://example.com/d,invalid"
+  }
+}

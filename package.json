@@ -1,0 +1,58 @@
+{
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
+  "dependencies": {
+    "@aws-amplify/ui-react": "^3.5.6",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.6",
+    "@mui/lab": "^5.0.0-alpha.106",
+    "@mui/material": "^5.10.8",
+    "@tanstack/react-query": "^4.10.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aws-amplify": "^4.3.37",
+    "notistack": "^2.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^3.1.4",
+    "react-hook-form": "^7.39.1",
+    "react-player": "^2.11.0",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "5.0.1",
+    "react-use": "^17.4.0",
+    "web-vitals": "^2.1.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "license": "MIT-0",
+  "name": "aws-medialive-channel-orchestrator",
+  "private": true,
+  "scripts": {
+    "build": "react-scripts build",
+    "config": "./config.sh ${STACK_NAME:-serverless-media-controller}",
+    "deploy": "aws s3 cp --recursive build/ s3://$(npm run-script echo-ui-bucket --silent)",
+    "echo-ui-bucket": "aws cloudformation describe-stacks --stack-name ${STACK_NAME:-serverless-media-controller} --query 'Stacks[0].Outputs[?OutputKey==`WebUIBucket`].OutputValue' --output text",
+    "echo-ui-url": "aws cloudformation describe-stacks --stack-name ${STACK_NAME:-serverless-media-controller} --query 'Stacks[0].Outputs[?OutputKey==`WebUrl`].OutputValue' --output text",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run-script config && npm run-script build",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+  "version": "0.1.0"
+}

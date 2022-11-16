@@ -1,0 +1,86 @@
+{
+  "OriginEndpoints": [
+    {
+      "Arn": "arn:aws:mediapackage:eu-west-1:111122223333:origin_endpoints/abcdef01234567890",
+      "ChannelId": "test",
+      "DashPackage": {
+        "AdTriggers": [
+          "SPLICE_INSERT",
+          "PROVIDER_ADVERTISEMENT",
+          "DISTRIBUTOR_ADVERTISEMENT",
+          "PROVIDER_PLACEMENT_OPPORTUNITY",
+          "DISTRIBUTOR_PLACEMENT_OPPORTUNITY"
+        ],
+        "AdsOnDeliveryRestrictions": "RESTRICTED",
+        "ManifestLayout": "FULL",
+        "ManifestWindowSeconds": 60,
+        "MinBufferTimeSeconds": 30,
+        "MinUpdatePeriodSeconds": 15,
+        "PeriodTriggers": [],
+        "Profile": "NONE",
+        "SegmentDurationSeconds": 2,
+        "SegmentTemplateFormat": "NUMBER_WITH_TIMELINE",
+        "StreamSelection": {
+          "MaxVideoBitsPerSecond": 2147483647,
+          "MinVideoBitsPerSecond": 0,
+          "StreamOrder": "ORIGINAL"
+        },
+        "SuggestedPresentationDelaySeconds": 25,
+        "UtcTiming": "NONE"
+      },
+      "Description": "DASH endpoint created by MediaLive for channel test",
+      "Id": "testDASHEndpoint",
+      "ManifestName": "index",
+      "Origination": "ALLOW",
+      "StartoverWindowSeconds": 0,
+      "Tags": {
+        "MSAM-Diagram": "test",
+        "MSAM-Tile": "test",
+        "MediaLive-Workflow": "test"
+      },
+      "TimeDelaySeconds": 0,
+      "Url": "https://abcdef01234567890.mediapackage.eu-west-1.amazonaws.com/out/v1/abcdef01234567890/index.mpd",
+      "Whitelist": []
+    },
+    {
+      "Arn": "arn:aws:mediapackage:eu-west-1:111122223333:origin_endpoints/abcdef01234567891",
+      "ChannelId": "test",
+      "Description": "HLS endpoint created by MediaLive for channel test",
+      "HlsPackage": {
+        "AdMarkers": "NONE",
+        "AdTriggers": [
+          "SPLICE_INSERT",
+          "PROVIDER_ADVERTISEMENT",
+          "DISTRIBUTOR_ADVERTISEMENT",
+          "PROVIDER_PLACEMENT_OPPORTUNITY",
+          "DISTRIBUTOR_PLACEMENT_OPPORTUNITY"
+        ],
+        "AdsOnDeliveryRestrictions": "RESTRICTED",
+        "IncludeDvbSubtitles": false,
+        "IncludeIframeOnlyStream": false,
+        "PlaylistType": "EVENT",
+        "PlaylistWindowSeconds": 60,
+        "ProgramDateTimeIntervalSeconds": 0,
+        "SegmentDurationSeconds": 6,
+        "StreamSelection": {
+          "MaxVideoBitsPerSecond": 2147483647,
+          "MinVideoBitsPerSecond": 0,
+          "StreamOrder": "ORIGINAL"
+        },
+        "UseAudioRenditionGroup": false
+      },
+      "Id": "devHLSEndpoint",
+      "ManifestName": "index",
+      "Origination": "ALLOW",
+      "StartoverWindowSeconds": 0,
+      "Tags": {
+        "MSAM-Diagram": "test",
+        "MSAM-Tile": "test",
+        "MediaLive-Workflow": "test"
+      },
+      "TimeDelaySeconds": 0,
+      "Url": "https://abcdef01234567891.mediapackage.eu-west-1.amazonaws.com/out/v1/abcdef01234567891/index.m3u8",
+      "Whitelist": []
+    }
+  ]
+}
