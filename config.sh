@@ -9,7 +9,7 @@ function usage {
 
 function main {
   if [ -z "$1" ]; then
-    stack_filter="medalive-channel-orchestrator"
+    stack_filter="medialive-channel-orchestrator"
   else
     stack_filter="$1"
   fi
