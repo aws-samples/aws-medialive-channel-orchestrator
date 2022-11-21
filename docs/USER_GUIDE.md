@@ -11,6 +11,7 @@ To deploy this sample you will need to install:
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
 - [NodeJS v14+](https://nodejs.org/en/download/)
+- jq
 - (Windows only) WSL or another Unix-like shell (e.g. Cygwin or similar)
 - (Optional) [Git](https://git-scm.com/downloads)
 

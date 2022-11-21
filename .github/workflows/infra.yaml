@@ -27,7 +27,7 @@ jobs:
       - name: Install cfn-lint
         run: pip install cfn-lint
       # Setup Ruby
-      - uses: actions/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.6'
       - name: Install cfn-nag
