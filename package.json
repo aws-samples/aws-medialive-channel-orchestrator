@@ -45,7 +45,7 @@
   "private": true,
   "scripts": {
     "build": "react-scripts build",
-    "config": "./config.sh ${STACK_NAME:-serverless-media-controller}",
+    "config": "./config.sh ${STACK_NAME:-medialive-channel-orchestrator}",
     "deploy": "aws s3 cp --recursive build/ s3://$(npm run-script echo-ui-bucket --silent)",
     "echo-ui-bucket": "aws cloudformation describe-stacks --stack-name ${STACK_NAME:-medialive-channel-orchestrator} --query 'Stacks[0].Outputs[?OutputKey==`WebUIBucket`].OutputValue' --output text",
     "echo-ui-url": "aws cloudformation describe-stacks --stack-name ${STACK_NAME:-medialive-channel-orchestrator} --query 'Stacks[0].Outputs[?OutputKey==`WebUrl`].OutputValue' --output text",
