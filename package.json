@@ -45,14 +45,19 @@
   "private": true,
   "scripts": {
     "build": "react-scripts build",
-    "config": "./config.sh ${STACK_NAME:-medialive-channel-orchestrator}",
+    "config": "node cli.js generate-config",
     "deploy": "aws s3 cp --recursive build/ s3://$(npm run-script echo-ui-bucket --silent)",
-    "echo-ui-bucket": "aws cloudformation describe-stacks --stack-name ${STACK_NAME:-medialive-channel-orchestrator} --query 'Stacks[0].Outputs[?OutputKey==`WebUIBucket`].OutputValue' --output text",
-    "echo-ui-url": "aws cloudformation describe-stacks --stack-name ${STACK_NAME:-medialive-channel-orchestrator} --query 'Stacks[0].Outputs[?OutputKey==`WebUrl`].OutputValue' --output text",
+    "echo-ui-bucket": "node cli.js echo-bucket",
+    "echo-ui-url": "node cli.js echo-url",
     "eject": "react-scripts eject",
     "predeploy": "npm run-script config && npm run-script build",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "devDependencies": {
+    "@aws-sdk/client-cloudformation": "^3.218.0",
+    "commander": "^9.4.1",
+    "toml": "^3.0.0"
+  }
 }
