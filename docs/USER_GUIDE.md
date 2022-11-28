@@ -11,7 +11,6 @@ To deploy this sample you will need to install:
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
 - [NodeJS v14+](https://nodejs.org/en/download/)
-- jq
 - (Windows only) WSL or another Unix-like shell (e.g. Cygwin or similar)
 - (Optional) [Git](https://git-scm.com/downloads)
 
@@ -70,14 +69,6 @@ The stack will be deployed and config will be saved to `samconfig.toml`.
 You can omit the `--guided` and `--stack-name` CLI options for subsequent deployments.
 
 ### Deploy the frontend infrastructure
-
-**Note:** if you deployed the backend infrastructure with a name other than
-the default (**medialive-channel-orchestrator**) then you will need to set
-the `STACK_NAME` variable in your shell before continuing e.g.
-
-```bash
-export STACK_NAME=your-stack-name
-```
 
 To deploy the frontend infrastructure, run the following command:
 
