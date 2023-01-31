@@ -60,7 +60,7 @@ const generateConfig = (options) => {
 
   getStackDetails(samConfig, samConfigEnv)
     .then(details => getOutputs(details.stackName, details.region))
-    .then(stackOutputs => writeConfigFile(".env.template", ".env.local", stackOutputs))
+    .then(stackOutputs => writeConfigFile(".env.template", ".env", stackOutputs))
     .then(() => console.log("Config generated successfully!"))
     .catch((err) => console.error(`Failed to generate config file: ${err}`));
 }
