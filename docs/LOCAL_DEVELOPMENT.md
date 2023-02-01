@@ -22,7 +22,7 @@ To generate the frontend config file (`.env.local`), run:
 npm run-script config
 ```
 
-This will generate a `.env` file which contains the required configuration for the frontend
+This will generate a `.env.local` file which contains the required configuration for the frontend
 application. To start the frontend locally, run:
 
 ```bash
