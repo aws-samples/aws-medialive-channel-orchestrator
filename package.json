@@ -30,7 +30,6 @@
     "react-hook-form": "^7.39.1",
     "react-player": "^2.11.0",
     "react-router-dom": "^6.4.3",
-    "react-scripts": "5.0.1",
     "react-use": "^17.4.0",
     "web-vitals": "^2.1.4"
   },
@@ -44,20 +43,22 @@
   "name": "aws-medialive-channel-orchestrator",
   "private": true,
   "scripts": {
-    "build": "react-scripts build",
+    "build": "vite build",
+    "start": "vite",
+    "serve": "vite preview",
     "config": "node cli.js generate-config",
-    "deploy": "aws s3 cp --recursive build/ s3://$(npm run-script echo-ui-bucket --silent)",
+    "deploy": "aws s3 cp --recursive dist/ s3://$(npm run-script echo-ui-bucket --silent)",
     "echo-ui-bucket": "node cli.js echo-bucket",
     "echo-ui-url": "node cli.js echo-url",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run-script config && npm run-script build",
-    "start": "react-scripts start",
-    "test": "react-scripts test"
+    "predeploy": "npm run-script config && npm run-script build"
   },
   "version": "0.1.0",
   "devDependencies": {
     "@aws-sdk/client-cloudformation": "^3.218.0",
+    "@vitejs/plugin-react": "^3.0.1",
     "commander": "^9.4.1",
-    "toml": "^3.0.0"
+    "toml": "^3.0.0",
+    "vite": "^4.0.4",
+    "vite-plugin-svgr": "^2.4.0"
   }
 }

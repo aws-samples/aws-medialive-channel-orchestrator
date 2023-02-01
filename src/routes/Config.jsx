@@ -199,7 +199,7 @@ const Config = () => {
           )}
         </>
       )}
-      {dataType === OUTPUTS && (
+      {(dataType === OUTPUTS && selectedChannel) && (
         <>
           <Typography variant={"h6"}>Discovered Outputs</Typography>
           <DiscoveredOutputsTable
