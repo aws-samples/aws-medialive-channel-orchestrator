@@ -11,7 +11,7 @@ for local development you will also need:
 For local development, you will need to:
 
 1. [Deploy the backend infrastructure](./USER_GUIDE.md#deployment) overriding
-   the `AccessControlAllowOriginOverride` stack parameter with `http://localhost:3000`
+   the `AccessControlAllowOriginOverride` stack parameter with `http://localhost:5174`
 2. Generate a config file
 
 ### Generate a Config File

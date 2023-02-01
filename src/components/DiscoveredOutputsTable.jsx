@@ -15,7 +15,7 @@ import usePagination from "../hooks/usePagination";
 
 export const DiscoveredOutputsTable = ({
   existingOutputs = [],
-  channelId = [],
+  channelId = undefined,
   onAdd,
 }) => {
   const { page, rowsPerPage, handleChangePage, handleChangeRowsPerPage } =

@@ -77,7 +77,7 @@ npm run-script deploy
 ```
 
 The `deploy` command does the following:
-1. Generates an `.env.local` file using the stack outputs from the stack
+1. Generates an `.env` file using the stack outputs from the stack
    created in step 1
 2. Builds the frontend application
 3. Copies the resulting files to the Web UI S3 Bucket created as part

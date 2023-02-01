@@ -47,7 +47,7 @@
     "start": "vite",
     "serve": "vite preview",
     "config": "node cli.js generate-config",
-    "deploy": "aws s3 cp --recursive build/ s3://$(npm run-script echo-ui-bucket --silent)",
+    "deploy": "aws s3 cp --recursive dist/ s3://$(npm run-script echo-ui-bucket --silent)",
     "echo-ui-bucket": "node cli.js echo-bucket",
     "echo-ui-url": "node cli.js echo-url",
     "predeploy": "npm run-script config && npm run-script build"

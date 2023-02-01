@@ -9,6 +9,9 @@ export default defineConfig({
     "process.env": process.env,
   },
   resolve: {
+    alias: {
+      './runtimeConfig': './runtimeConfig.browser',
+    },
     extensions: [".jsx", ".js"],
   },
 });
