@@ -12,7 +12,7 @@
     ]
   },
   "dependencies": {
-    "@aws-amplify/ui-react": "^5.2.0",
+    "@aws-amplify/ui-react": "^6.5.3",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.6",
@@ -22,7 +22,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "aws-amplify": "^5.3.19",
+    "aws-amplify": "^6.6.4",
     "notistack": "^2.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
